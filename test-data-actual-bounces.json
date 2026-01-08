@@ -1,0 +1,232 @@
+{
+  "data": {
+    "TrueLinkCreditReport": {
+      "Borrower": {
+        "CreditScore": {
+          "riskScore": "753",
+          "populationRank": "21",
+          "CreditScoreModel": {
+            "symbol": "CIBILTUSC3"
+          }
+        },
+        "TradeLinePartition": [
+          {
+            "Tradeline": {
+              "creditorName": "SIDBI",
+              "accountTypeSymbol": "50",
+              "currentBalance": "50000",
+              "highBalance": "100000",
+              "dateOpened": "2023-01-15",
+              "dateReported": "2025-11-10",
+              "writtenOffAmtTotal": "0",
+              "GrantedTrade": {
+                "PayStatusHistory": {
+                  "MonthlyPayStatus": [
+                    {
+                      "status": "0",
+                      "monthYear": "2025-12",
+                      "date": "2025-12-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-11",
+                      "date": "2025-11-01+05:30"
+                    },
+                    {
+                      "status": "27",
+                      "monthYear": "2025-10",
+                      "date": "2025-10-01+05:30"
+                    },
+                    {
+                      "status": "26",
+                      "monthYear": "2025-09",
+                      "date": "2025-09-01+05:30"
+                    },
+                    {
+                      "status": "27",
+                      "monthYear": "2025-08",
+                      "date": "2025-08-01+05:30"
+                    },
+                    {
+                      "status": "27",
+                      "monthYear": "2025-07",
+                      "date": "2025-07-01+05:30"
+                    },
+                    {
+                      "status": "24",
+                      "monthYear": "2025-06",
+                      "date": "2025-06-01+05:30"
+                    },
+                    {
+                      "status": "29",
+                      "monthYear": "2025-05",
+                      "date": "2025-05-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-04",
+                      "date": "2025-04-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-03",
+                      "date": "2025-03-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-02",
+                      "date": "2025-02-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-01",
+                      "date": "2025-01-01+05:30"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "Tradeline": {
+              "creditorName": "HDFC Bank",
+              "accountTypeSymbol": "10",
+              "currentBalance": "59230",
+              "highBalance": "200000",
+              "dateOpened": "2020-01-15",
+              "dateReported": "2025-11-10",
+              "writtenOffAmtTotal": "0",
+              "GrantedTrade": {
+                "PayStatusHistory": {
+                  "MonthlyPayStatus": [
+                    {
+                      "status": "0",
+                      "monthYear": "2025-12",
+                      "date": "2025-12-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-11",
+                      "date": "2025-11-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-10",
+                      "date": "2025-10-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-09",
+                      "date": "2025-09-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-08",
+                      "date": "2025-08-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-07",
+                      "date": "2025-07-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-06",
+                      "date": "2025-06-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-05",
+                      "date": "2025-05-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-04",
+                      "date": "2025-04-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-03",
+                      "date": "2025-03-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-02",
+                      "date": "2025-02-01+05:30"
+                    },
+                    {
+                      "status": "0",
+                      "monthYear": "2025-01",
+                      "date": "2025-01-01+05:30"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "InquiryPartition": [
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-12-10+05:30",
+              "InquiryType": "Personal"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-12-05+05:30",
+              "InquiryType": "Auto"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-11-15+05:30",
+              "InquiryType": "Personal"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-11-08+05:30",
+              "InquiryType": "Home"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-10-20+05:30",
+              "InquiryType": "Personal"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-10-05+05:30",
+              "InquiryType": "Personal"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-09-15+05:30",
+              "InquiryType": "Credit Card"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-09-01+05:30",
+              "InquiryType": "Personal"
+            }
+          },
+          {
+            "Inquiry": {
+              "InquiryDate": "2025-08-20+05:30",
+              "InquiryType": "Personal"
+            }
+          }
+        ]
+      }
+    },
+    "Sources": {
+      "Source": {
+        "InquiryDate": "2025-12-16+05:30"
+      }
+    }
+  }
+}

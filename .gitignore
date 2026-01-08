@@ -1,0 +1,16 @@
+node_modules
+yarn.lock
+package-lock.json
+.vercel.json
+.env
+.enves
+.vercel
+
+
+
+
+
+certificate.p12
+L7UATChainCertificate.crt
+www.finvest.ambit.co.crt  
+www.finvest.ambit.co.key

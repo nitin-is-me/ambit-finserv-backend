@@ -1,0 +1,142 @@
+/* eslint-disable */
+const moment = require('moment');
+
+exports.customErrorMessages = error => {
+  if (error.isJoi) {
+    if (error.details[0].type === 'any.required') {
+      return `${error.details[0].context.label} is required`;
+    }
+    if (error.details[0].type === 'string.regex.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.email') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.min') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.max') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'number.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'number.min') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'number.max') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'number.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'number.integer') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'date.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'date.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'date.min') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'date.max') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'date.format') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'boolean.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'boolean.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'object.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'object.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'object.unknown') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.empty') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.includesRequiredUnknowns') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.includes') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.includesSingle') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'array.includesOne') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    if (error.details[0].type === 'string.pattern.base') {
+      return `${error.details[0].context.label} is invalid`;
+    }
+    return error.details[0].message;
+  } else if (error.name === 'MongoServerError') {
+    error.status = 422;
+    if (error.code === 11000) {
+      return `${Object.keys(error.keyValue)} already exists`;
+    }
+  } else {
+    error.status = 500;
+    return error.message;
+  }
+};
+
+exports.validateStickerArray = array => {
+  array.forEach((element, index) => {
+    if (!element.distributor_id) {
+      throw new Error(`distributor_id is required at row ${index + 1}`);
+    }
+    if (!element.status) {
+      throw new Error(`status is required at row ${index + 1}`);
+    }
+  });
+};
+
+exports.sanitizedStickerArray = array => {
+  const toReturn = [];
+  array.forEach(element => {
+    const obj = {
+      distributor_id: element.distributor_id,
+      status: element.status,
+    };
+
+    const sticker = {
+      ...obj,
+    };
+    toReturn.push(sticker);
+  });
+  return toReturn;
+};
+
+exports.excelDateToJSDate = excelDate => {
+  if (excelDate?.toString()?.length === 5) {
+    let date = new Date(Math.round((excelDate - (25567 + 2)) * 86400 * 1000));
+    date.setHours(new Date().getHours());
+    date.setMinutes(new Date().getMinutes());
+    date = new Date(date);
+    return moment(date).toDate();
+  } else {
+    return moment(excelDate, 'DD-MM-YYYY').toDate();
+  }
+};

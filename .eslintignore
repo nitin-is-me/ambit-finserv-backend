@@ -1,0 +1,34 @@
+# Test and Debug Files
+test-*.js
+debug-*.js
+*-test.js
+*Test.js
+analyze-*.js
+verify-*.js
+otpTest.js
+debugOTP.js
+fetch-real-cibil-data.js
+live_data.json
+test-data-*.json
+
+# Dependencies
+node_modules/
+.vercel/
+
+# Environment
+.env
+.enves
+.env.local
+.env.*.local
+
+# OS Files
+.DS_Store
+.vscode/
+
+# Build Output
+dist/
+build/
+.next/
+
+# Documentation (optional - remove if you want to lint these)
+*.md
