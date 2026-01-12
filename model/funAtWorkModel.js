@@ -6,6 +6,7 @@ const funAtWorkSchema = new Schema(
     title: String,
     description: String,
     image: [{url: String, description: String}],
+    type: String,
   },
   {
     timestamps: true,
