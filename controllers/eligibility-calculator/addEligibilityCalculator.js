@@ -60,7 +60,7 @@ const addEligibilityCalculator = async (req, res) => {
       otp,
       city,
       state,
-      is_otp_verified: false, // Will be verified separately
+      is_otp_verified: req.body.is_otp_verified || false,
 
       // Optional fields
       loan_type,
